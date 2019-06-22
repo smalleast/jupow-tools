@@ -1,0 +1,24 @@
+# Electron builder configure
+# https://www.electron.build/configuration/configuration
+
+# The application id. Used as CFBundleIdentifier for MacOS and as Application User Model ID for Windows (NSIS target only, Squirrel.Windows not supported). It is strongly recommended that an explicit ID is set.
+appId: com.zhulogic.design
+# As name, but allows you to specify a product name for your executable which contains spaces and other special characters not allowed in the name property.
+productName: 住芯智能
+
+# The top-level dmg key contains set of options instructing electron-builder on how it should build DMG.
+dmg:
+  #  The path to DMG icon (volume icon), which will be shown when mounted, relative to the build resources or to the project directory. Defaults to the application icon (build/icon.icns).
+  icon: build/icon.png
+
+# The top-level win key contains set of options instructing electron-builder on how it should build Windows targets. These options applicable for any Windows target.
+win:
+  # The target package type: list of nsis, nsis-web (Web installer), portable (portable app without installation), appx, msi, squirrel, 7z, zip, tar.xz, tar.lz, tar.gz, tar.bz2, dir. AppX package can be built only on Windows 10.
+  target: nsis
+  # The path to application icon.
+  icon: build/icon.png
+
+# The top-level nsis key contains set of options instructing electron-builder on how it should build NSIS target (default target for Windows).
+nsis:
+  # Whether to create one-click installer or assisted
+  oneClick: false
